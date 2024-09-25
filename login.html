@@ -7,9 +7,29 @@
     <link rel="stylesheet" href="css/valorant-style.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Valorant_app</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="favorites.html">Mes Favoris</a></li>
+                <li><a href="register.html">Inscription</a></li>
+                <li><a href="login.html">Connexion</a></li>
+                
+
+
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <div class="heading-block">
-            <h1>Connexion</h1>
+            <h1>Se connecter</h1>
+            <div class="button-box">
+                <button type="button" class="button-mask" onclick="window.location.href='register.html';">
+                    <span>S'inscrire</span>
+                </button>
+            </div>
         </div>
         <!-- Formulaire de connexion -->
         <div class="login-form">

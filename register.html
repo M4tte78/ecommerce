@@ -5,15 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <link rel="stylesheet" href="css/valorant-style.css">
+    <script>
+        // Fonction de validation du mot de passe
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$/;
+
+            if (!passwordRegex.test(password)) {
+                alert("Le mot de passe doit contenir au moins 12 caractères, incluant une majuscule, une minuscule, un chiffre et un caractère spécial.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </head>
 <body>
+    
     <div class="container">
         <div class="heading-block">
             <h1>Inscription</h1>
+            <div class="button-box">
+                <button type="button" class="button-mask" onclick="window.location.href='login.html';">
+                    <span>Se connecter</span>
+                </button>
+            </div>
         </div>
         <!-- Formulaire d'inscription -->
         <div class="signup-form">
-            <form action="php/register.php" method="POST">
+            <form action="php/register.php" method="POST" onsubmit="return validateForm()">
                 <label for="username">Nom d'utilisateur</label>
                 <input type="text" id="username" name="username" required>
             
@@ -28,9 +48,8 @@
                         <span>S'inscrire</span>
                     </button>
                 </div>
+                
             </form>
-            
-            
         </div>
     </div>
 </body>

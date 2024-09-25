@@ -156,3 +156,40 @@ button {
     font-size: 16px;
     letter-spacing: 1px;
 }
+
+/* Style pour la case à cocher */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border: 2px solid var(--vlrnt-red);
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--vlrnt-red);
+    border: 2px solid var(--vlrnt-red);
+    color: white;
+}
+
+/* Style pour le label et le lien vers la politique de confidentialité */
+label.rgpd-label {
+    font-size: 0.9rem;
+    color: var(--vlrnt-blk);
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+label.rgpd-label a {
+    color: var(--vlrnt-red);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+label.rgpd-label a:hover {
+    text-decoration: underline;
+}
