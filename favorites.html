@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Favoris</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Utilisation du fichier CSS existant -->
+</head>
+<body>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Valorant_app</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                
+    <!-- Conteneur des favoris -->
+    <div class="container">
+        <h1>Mes Favoris</h1>
+        <div id="favorites" class="grid grid-cols-3 gap-4">
+            <!-- Le contenu des favoris sera généré par favorites.php -->
+        </div>
+    </div>
+
+    <script>
+        // Charge les favoris depuis favorites.php
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('php/favorites.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('favorites').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Erreur lors du chargement des favoris:', error);
+                });
+        });
+    </script>
+</body>
+</html>

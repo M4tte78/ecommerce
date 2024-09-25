@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap");
+
+/* COLORS */
+:root {
+    --vlrnt-blk: #0f1923;
+    --vlrnt-red: #ff4654;
+}
+
+/* FONT */
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    border: 10px solid var(--vlrnt-red);
+    background-color: var(--vlrnt-blk);
+    color: var(--vlrnt-blk);
+    font-family: "Rajdhani", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 830px;
+    height: 560px;
+    background-color: white;
+}
+
+.container div {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    padding: 36px;
+}
+
+.heading-block {
+    background-color: var(--vlrnt-red);
+    color: white;
+    width: 348px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-block h1 {
+    font-size: 64px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.signup-form,
+.login-form {
+    width: 482px;
+}
+
+.signup-form p,
+.login-form p {
+    margin: 0;
+}
+
+form {
+    margin: 30px 0;
+}
+
+form * {
+    display: block;
+    font-family: "Rajdhani", sans-serif;
+}
+
+label,
+.button-box {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+label {
+    margin: 8px 0;
+}
+
+input {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 30px;
+    padding: 0 8px;
+    font: 400 18px "Rajdhani", sans-serif;
+    background-color: var(--vlrnt-blk);
+    color: white;
+    border: 1px solid #fff;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--vlrnt-red);
+}
+
+/* Bouton pour la soumission */
+button {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+}
+
+/* Styles du bouton avec effet dynamique */
+.button-box {
+    display: inline-block;
+    width: auto;
+    border: 1px solid rgba(15, 25, 35, 0.4);
+    padding: 6px;
+}
+
+.button-box .button-mask {
+    cursor: pointer;
+    position: relative;
+    padding: 18px 60px;
+    display: block;
+    overflow: hidden;
+    color: white;
+    background-color: var(--vlrnt-red);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1px solid rgba(15, 25, 35, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.button-box .button-mask:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 130%;
+    height: 100%;
+    background-color: var(--vlrnt-blk);
+    transform: translateX(-100%) skew(-15deg);
+    transition: transform 0.4s ease;
+}
+
+.button-box .button-mask:hover:before {
+    transform: translateX(0) skew(-15deg);
+}
+
+.button-box span {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
