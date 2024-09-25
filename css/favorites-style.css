@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap");
+
+/* COLORS */
+:root {
+    --vlrnt-blk: #0f1923;
+    --vlrnt-red: #ff4654;
+    --text-gray: #ece8e1;
+}
+
+/* FONT */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--vlrnt-blk);
+    color: var(--text-gray);
+    font-family: "Rajdhani", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header et Navigation */
+header {
+    background-color: var(--vlrnt-blk);
+    border-bottom: 5px solid var(--vlrnt-red);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: "Teko", sans-serif;
+    color: var(--vlrnt-red);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.navbar a {
+    color: var(--vlrnt-red);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: var(--vlrnt-red);
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Section de Favoris */
+.favorites-section {
+    text-align: center;
+}
+
+.favorites-section h1 {
+    font-size: 2.5rem;
+    color: var(--vlrnt-red);
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #ece8e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--vlrnt-red);
+}
+
+.card-content {
+    padding: 10px 0;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--vlrnt-blk);
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: var(--vlrnt-blk);
+    line-height: 1.4;
+}
+
+.btn-favorite {
+    background-color: var(--vlrnt-red);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-favorite:hover {
+    background-color: #ff3333;
+}
+
+/* Footer */
+footer {
+    background-color: var(--vlrnt-blk);
+    color: var(--text-gray);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Grille pour la disposition des cartes */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
